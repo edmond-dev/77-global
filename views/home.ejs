@@ -3,18 +3,60 @@
   <head>
       <%- include('partials/layer/head.ejs') %>
   </head>
-  <body>
-    <div class="main-body">
-      <div class="nav-bar">
-        Nav bar here
+  <body class="main-body">
+
+    <div class="nav-bar">
+      <div class="mainlinks">
+        <a href="/">GlobalFriend.com</a>
+        <input class="homeNav" type="text" name="" value="" placeholder="filter Tosses... e.g Niagra falls or city of Edmonds...">
       </div>
-        <div class="images-clips-grid">There will be a video here/pic</div>
-        <div class="toss-request">
-          Of course, the toss request
-        </div>
     </div>
 
+    <div class="main-grid-view">
+
+      <div class="homelinks">
+        <div class="sideLinks">
+          <a class="homelink" href="/">Home</a>
+          <a href="tossReq">Toss</a>
+          <a href="#">Sign Out</a>
+        </div>
+      </div>
 
 
+      <div class="view-toss-main">
+        <div class="top-toss">
+          Top Toss Requests:
+          <button id="myBtn">Toss Request</button>
+          <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="tossInputs">
+                  <input class="photo-video-upload" type="text" name="photo-vid input" value="" placeholder="upload a photo/video clip of a place...">
+                  <div class="tossLocation">
+                    <label  class="prompt" for="tossrequest"> Toss a request</label>
+                    <input class="tossInput" type="text" name="tossreq-input" value="" placeholder="Ask and then toss...Be specific on a location or site">
+                    <input class="toss-submit" type="submit" value="Toss">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="tosses">
+          this is where we view toss requests
+          By applying the shadows to pseudo elements which you then manipulate, you can get some pretty fancy 3D looking box shadows:
+        </div>
+      </div>
+
+      <div class="travelComps">
+        <div class="travelC-containers">
+          <p>Get inspired. </p>
+          <p>Check where others are vacationing</p>
+          here I am just gonna show inputed results
+        </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

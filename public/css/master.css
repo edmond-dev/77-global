@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 .frontBody{
   background-color: #F1FAF6;
   margin: 0;
@@ -73,7 +75,6 @@
 }
 
 /* sign up */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
 *:focus {
   outline: none;
 }
@@ -113,7 +114,7 @@ h1 {
   font-size: 28px;
 }
 
-input[type="text"],
+input[class="auth-all"],
 input[type="password"] {
   display: block;
   box-sizing: border-box;
@@ -129,14 +130,17 @@ input[type="password"] {
   transition: 0.2s ease;
 }
 
-input[type="text"]:focus,
+input[class="auth-all"]:focus,
 input[type="password"]:focus {
   border-bottom: 2px solid #16a085;
   color: #16a085;
   transition: 0.2s ease;
 }
 
-input[type="submit"] {
+input[class="submit-auth"],
+input[class="signIn-submit"],
+input[class="signUp-submit"]
+ {
   margin-top: 28px;
   width: 120px;
   height: 32px;
@@ -151,25 +155,350 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+input[class="submit-auth"],
+input[class="signIn-submit"],
+input[class="signUp-submit"]:hover,
+input[class="submit-auth"],
+input[class="signIn-submit"],
+input[class="signUp-submit"]:focus {
   opacity: 0.8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   transition: 0.1s ease;
 }
 
-input[type="submit"]:active {
+input[class="submit-auth"],
+input[class="signIn-submit"],
+input[class="signUp-submit"]:active {
   opacity: 1;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   transition: 0.1s ease;
 }
 
 /*Home grid viewing*/
+.main-body {
+}
+.nav-bar, .mainnav-bar {
+  position: sticky;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background-color: #edfbfd;
+}
+.mainnav-bar {
+  position: sticky;
+}
+.mainlinks > a{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  padding-right: 125px;
+  color: grey;
+}
+.mainnav-bar > a{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  padding-right: 125px;
+  color: grey;
+}
+.homeNav, .searchbar {
+  border: none;
+  border-bottom: 1px solid #16a085;
+  margin-top: 10px;
+  margin-right: 16px;
+  margin-left: 16px;
+  font-size: 17px;
+  width: 750px;
+  padding:2px;
+  background:inherit;
 
-.images-clips-grid {
+}
+.main-body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-grid-view {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 250px);
-  grid-auto-rows: 250px;
-  margin: 20px;
+  grid-template-columns: 150px auto 350px;
+  width: auto;
+}
 
+.homelinks{
+  position: sticky;
+  margin-left: 10px;
+  height: 500px;
+}
+.homelink {
+  background: #C0C0C0;
+  border-right: 1px solid grey;
+  border-radius: 3px;
+}
+.sideLinks > a{
+  display: block;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-top: 30px;
+  padding: 10px;
+  font-size: 16px;
+  color: grey;
+}
+.view-toss-main {
+  margin-right: 10px;
+  margin-top: 5px;
+  border-left: 1px solid #16a085;
+
+}
+.top-toss {
+  height: 50px;
+  text-align: left;
+  font-size: 20px;
+  color: grey;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
+  border-bottom: 1px solid #16a085;
+}
+/*modal buttons*/
+#comments, .events, .deals, .travelcompanions {
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  background: #16a085;
+  color: white;
+  font-weight: 300;
+  padding: 2px;
+  border: 0;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+#myBtn {
+  float: right;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  background: #16a085;
+  color: white;
+  font-weight: 300;
+  padding: 5px;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+}
+#myBtn:hover {
+  cursor: pointer;
+  background:#43734c;
+}
+.tosses {
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  border-radius: 3px;
+  background: #f6fdfe;
+  border-left: 5px solid grey;
+  margin-right: 2px;
+  border-radius: 10px;
+  color: #16a085;
+
+}
+.travelComps {
+  margin-right: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  height: auto;
+  background: #f4f0ec;
+  color: grey;
+}
+.travelC-containers {
+  padding-left: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*toss req modal*/
+/* The Modal (background) */
+.modal {
+  display: none;/* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box*/
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height:100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin-left:220px;
+  padding: 50px;
+  border-radius: 10px;
+  width: 40%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  top:0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tossLocation {
+  padding-top: 20px;
+}
+.photo-video-upload {
+  width: 250px;
+  height: 250px;
+  padding: 1px;
+  text-align: center;
+  border: 1px solid #16a085;
+  border-radius: 5px;
+  margin-left: 150px;
+
+}
+.prompt {
+  color: #16a085;
+}
+input[class="tossInput"],
+input[class="toss-submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+input[class="tossInput"] {
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid #16a085;
+}
+
+input[class="toss-submit"] {
+  width: 100px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 17px;
+  border-radius: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[class="toss-submit"]:hover {
+   background-color: #45a049;
+}
+
+/*mainInfo page*/
+.view {
+  display: grid;
+  grid-template-columns: 398px auto 350px;
+}
+.side-viewbar {
+  margin: 10px;
+}
+.sidenav {
+  border: 1px solid #16a085;
+  border-radius: 10px;
+  text-align: center;
+  position: sticky;
+}
+.sideView {
+  padding: 2px;
+}
+/*comments modal*/
+.commentsModal {
+  position: relative;
+  border: 1px solid #16a085;
+  border-radius: 10px;
+  width: 360px;
+  height: 510px;
+  padding: 5px;
+  margin-top: 10px;
+}
+.saySomething {
+  font-size: 17px;
+  color: #16a085;
+  padding-top: 2px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #16a085;
+}
+.commentsPrint {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  height: 410px;
+  width: auto;
+  padding-top: 10px;
+  overflow: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #333333;
+  border-radius: 10px;
+  margin: 5px;
+}
+.commentsInputs {
+  position:absolute;
+  top: 470px;
+  left: 0;
+  width: auto;
+  border-top: 2px solid #16a085;
+  padding-top:5px;
+  padding-left: 3px;
+}
+.commentsInput {
+  border:1px solid #16a085;
+  border-radius: 10px;
+  height: 30px;
+  width: 298px;
+  padding: 3px;
+  overflow: auto;
+}
+.submit-comment {
+  font-size: 15px;
+  background: green;
+  border:0;
+  border-radius: 10px;
+  height: 30px;
+  width: 50px;
+  color: white;
+  padding: 2px;
+  text-align: center;
+}
+.user {
+  font-size: 18px;
+  font-weight: bold;
+  color: #b4bfb5;
+  padding-left: 10px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.commentsStruct {
+  border: 1px solid #b4bfb5;
+  color: #b4bfb5;
+  font-size: 16px;
+  height: auto;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
 }
