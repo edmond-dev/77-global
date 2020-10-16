@@ -27,7 +27,7 @@ const server = app.listen(app.get('port'), () => {
 //inporting modules
 const routes = require('./routes/index.js');
 const usersRoute = require('./routes/users.js');
-const productsRoute = require('./routes/products.js');
+const tossFeaturesRoute = require('./routes/products.js');
 
 //setting up a view engine
 app.set('view engine', 'ejs');
@@ -58,7 +58,7 @@ app.use(session({
 //instatiating inported modules
 app.use('/', routes);
 app.use('/auth', usersRoute);
-app.use('/products', productsRoute);
+app.use('/tossfeatures', tossFeaturesRoute);
 
 //error handling
 // catch 404 and forward to error handler

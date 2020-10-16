@@ -9,9 +9,9 @@ router.get('/', (req, res)=>{
   });
 });
 
-router.get('/main', (req, res) => {
-  res.render('main',{
-    title: "GlobalFriend | main"
+router.get('/test', (req, res) => {
+  res.render('test',{
+    title: "GlobalFriend | test"
   });
 });
 

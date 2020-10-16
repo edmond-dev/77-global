@@ -4,6 +4,421 @@
     <%- include('partials/layer/head.ejs') %>
   </head>
   <body>
-    
+
+    <!-- <div id="myModal" class="modal"> -->
+    <!-- Modal content -->
+      <!-- <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="tossInputs">
+          <button class="photo-video-upload"  type="button" name="button">+photo/video clip</button>
+          <div class="tossLocation">
+            <label  class="prompt" for="tossrequest"> Toss a request</label>
+            <input class="tossInput" type="text" name="tossreq-input" value="" placeholder="Ask and then toss...Be specific on a location or site">
+            <input class="toss-submit" type="submit" value="Toss">
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="sidenav"> -->
+      <button id="myBtn" type="button" name="button">Comments</button>
+      <div class="sideView">
+        <div class="commentsModal" id="modalcomments">
+          <div class="commentsModal-content">
+            <span class="close">&times;</span>
+            <p>modal</p>
+          </div>
+        </div>
+      </div>
+
+    <!-- </div> -->
+
+    <div id="eventsModal" class="modalevents">
+    <!-- Modal content -->
+      <div class="modalevents-content">
+        <span class="close2">&times;</span>
+        <div class="saySomething">
+          Events in the area worth visiting or doing
+        </div>
+          <div class="commentsInputs">
+            <textarea class="commentsInput" name="comment" placeholder="Type comment here..." rows="3" cols="20"></textarea>
+            <div class="commentSubmitbtn">
+              <input class="submit-comment" type="submit" name="submit" value="post">
+            </div>
+          </div>
+        <div class="commentsPrint">
+
+          <div class="commentsStruct">
+            <div class="user">
+              @Edmond
+            </div>
+            comments are printed right here
+            16a085 hex color red value is 22, green value
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+
+            I guess, in general, I’d consider fixed positioning fairly
+            safe these days, even on “mobile”.
+            But if you know you’re dealing with a pretty healthy
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="commentsModal" class="modalcomments">
+    <!-- Modal content -->
+      <div class="modalcomments-content">
+        <span class="close2"></span>
+        <div class="saySomething">
+          Comments and suggestions
+        </div>
+        <div class="commentsPrint">
+
+          <div class="commentsStruct">
+            <div class="user">
+              @Edmond
+            </div>
+            comments are printed right here
+            16a085 hex color red value is 22, green value
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+
+            I guess, in general, I’d consider fixed positioning fairly
+            safe these days, even on “mobile”.
+            But if you know you’re dealing with a pretty healthy
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+
+
+            /*comments modal*/
+            .modalcomments, .modalevents {
+              display: none;
+              position: fixed;
+              z-index: 1;
+              padding-top: 20px;
+              background-color: #fefefe;
+              margin-left:0px;
+              margin-top: 5px;
+              border-radius: 10px;
+              max-width: 330px;
+              height: 510px;
+              overflow: auto;
+            }
+
+            .saySomething {
+              font-size: 17px;
+              color: #16a085;
+              padding-top: 2px;
+              padding-bottom: 7px;
+              border-bottom: 2px solid #16a085;
+            }
+            .commentsPrint {
+              position: absolute;
+              /* top: 40px; */
+              /* left: 0; */
+              height: 410px;
+              width: auto;
+              padding-top: 10px;
+              overflow: auto;
+              padding-left: 10px;
+              padding-right: 10px;
+              background-color: #696969;
+              /* background-color: rgba(0,0,0,0.4); */
+              border-radius: 10px;
+              margin: 5px;
+            }
+            .commentsInputs {
+              position:absolute;
+              top: 460px;
+              left: 0;
+              width: auto;
+              border-top: 2px solid #16a085;
+              padding-top:5px;
+              padding-left: 3px;
+              background: #fefefe;
+            }
+            .commentSubmitbtn{
+              padding-top: 5px;
+              padding-left: 5px;
+              float: right;
+            }
+            .commentsInput {
+              border-bottom:1px solid #16a085;
+              border: 0;
+              height: auto;
+              width: auto;
+              padding: 3px;
+              padding-right: 2px;
+              overflow: auto;
+              font-size: 17;
+            }
+            .submit-comment {
+              font-size: 15px;
+              background: green;
+              border:0;
+              border-radius: 10px;
+              height: 30px;
+              width: 50px;
+              color: white;
+              padding: 5px;
+              padding-top: 2px;
+              text-align: center;
+              margin-top: 5px;
+            }
+            .user {
+              font-size: 18px;
+              font-weight: bold;
+              color: #b4bfb5;
+              padding-left: 10px;
+              border-top: 1px solid grey;
+              border-bottom: 1px solid grey;
+            }
+
+            .commentsStruct {
+              border: 1px solid #b4bfb5;
+              color: #F6F6F6;
+              font-size: 16px;
+              height: auto;
+              border-radius: 10px;
+              padding: 5px;
+              margin: 10px;
+            }
+
+            .commentsInputs {
+              position:absolute;
+              top: 380px;
+              left: 0;
+              min-width: 300px;
+              border-top: 2px solid #16a085;
+              padding-top:5px;
+              padding-left: 3px;
+              padding-bottom: 10px;
+              background: #fefefe;
+            }
+            .commentsPrint {
+              position: absolute;
+              height: 300px;
+              width: auto;
+              padding-top: 10px;
+              overflow: auto;
+              padding-left: 10px;
+              padding-right: 10px;
+              background-color: #696969;
+              border-radius: 10px;
+              margin: 5px;
+            }
+
+
+
+
+
+            /*toss req modal*/
+            /* The Modal (background) */
+            .modal {
+              display: none;/* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              padding-top: 50px; /* Location of the box*/
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height:100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+
+            /* Modal Content */
+            .modal-content {
+              background-color: #fefefe;
+              margin-left:20px;
+              margin-right: 50px;
+              padding: 50px;
+              border-radius: 10px;
+              width: 400px;
+            }
+
+            /* The Close Button */
+            .close2, .close  {
+              color: #aaaaaa;
+              float: right;
+              top:0;
+              font-size: 28px;
+              font-weight: bold;
+            }
+
+            .close2:hover,.close:hover,
+            .close2:focus, .close:hover {
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+            }
+
+            .modalcomments {
+              display: none;
+              position: fixed;
+              z-index: 1;
+              padding-top: 20px;
+              background-color: #fefefe;
+              margin-left:0px;
+              margin-top: 50px;
+              border-radius: 10px;
+              max-width: 330px;
+              min-width: 310px;
+              height: 500px;
+              overflow: auto;
+            }
+
+
+            input[class="tossInput"],
+            input[class="toss-submit"] {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              display: inline-block;
+              box-sizing: border-box;
+            }
+            input[class="tossInput"] {
+              height: 50px;
+              border: none;
+              border-bottom: 2px solid #16a085;
+            }
+
+            input[class="toss-submit"] {
+              width: 100px;
+              background-color: #4CAF50;
+              color: white;
+              font-size: 17px;
+              border-radius: 4px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            input[class="toss-submit"]:hover {
+               background-color: #45a049;
+            }
+
+            .modal-content {
+              background-color: #fefefe;
+              margin-left:50px;
+              margin-top: 50px;
+              padding: 50px;
+              border-radius: 10px;
+              width: 400px;
+            }
+            .photo-video-upload {
+              width: auto;
+              height: auto;
+              padding: 1px;
+              border: 0;
+
+            }
+            .tossInputs {
+              text-align: center;
+            }
+
+
+
+          </div>
+        </div>
+        <div class="commentsInputs">
+          <textarea class="commentsInput" name="comment" placeholder="Type comment here..." rows="3" cols="35"></textarea>
+          <div class="commentSubmitbtn">
+            <input class="submit-comment" type="submit" name="submit" value="post">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- <div class="saySomething">
+      Comments and suggestions
+    </div> -->
+    <!-- <div class="commentsPrint">
+
+      <div class="commentsStruct">
+        <div class="user">
+          @Edmond
+        </div>
+        comments are printed right here
+        16a085 hex color red value is 22, green value
+        is 160 and the blue value of its RGB is 133.
+        Cylindrical-coordinate representations
+        (also known as HSL) of color ...Notice we used position: fixed;.
+        The point of this is that a user could be s
+        crolled down the page, trigger a modal, and
+        have the modal be just as centered-and-visible a
+        s it would be if they weren’t scrolled.
+
+        I guess, in general, I’d consider fixed positioning fairly
+        safe these days, even on “mobile”.
+        But if you know you’re dealing with a pretty healthy
+        is 160 and the blue value of its RGB is 133.
+        Cylindrical-coordinate representations
+        (also known as HSL) of color ...Notice we used position: fixed;.
+        The point of this is that a user could be s
+        crolled down the page, trigger a modal, and
+        have the modal be just as centered-and-visible a
+        s it would be if they weren’t scrolled.
+        is 160 and the blue value of its RGB is 133.
+        Cylindrical-coordinate representations
+        (also known as HSL) of color ...Notice we used position: fixed;.
+        The point of this is that a user could be s
+        crolled down the page, trigger a modal, and
+        have the modal be just as centered-and-visible a
+        s it would be if they weren’t scrolled.
+
+
+      </div>
+    </div> -->
+    <!-- <div class="commentsInputs">
+      <textarea class="commentsInput" name="comment" placeholder="Type comment here..." rows="3" cols="35"></textarea>
+      <div class="commentSubmitbtn">
+        <input class="submit-comment" type="submit" name="submit" value="post">
+      </div>
+    </div> -->
+
+    <!-- <button class="events" type="button" name="button">Events</button>
+    <button class="deals" type="button" name="button">Deals</button>
+    <button class="travelcompanions" type="button" name="button">Travel companions</button> -->
   </body>
 </html>

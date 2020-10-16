@@ -5,79 +5,253 @@
   </head>
   <body class="main-body">
       <div class="mainnav-bar">
-        <a href="#">GlobalFriend.com</a>
-        <input class="searchbar"type="text" name="search" value="" placeholder="Search tosses">
+        <a class="companyName" href="#">GlobalFriend.com</a>
+        <a class="home" href="/">Home</a>
       </div>
+        <div class="sidenav-res">
+          <button  data-modal-target="#commentsbtn" class="comments" >Comments</button>
+          <button   data-modal-target="#eventsbtn" class="events" >Events</button>
+          <button  data-modal-target="#dealbtn" class="deals" >Deals</button>
+          <button data-modal-target="#travelbtn" class="travelcompanions" >Travel Companions</button>
+        </div>
       <div class="view">
        <div class="side-viewbar">
-        <div class="sidenav">
-          <button id="comments" type="button" name="button">Comments</button>
-          <button class="events" type="button" name="button">Events</button>
-          <button class="deals" type="button" name="button">Deals</button>
-          <button class="travelcompanions" type="button" name="button">Travel companions</button>
-        </div>
-          <div class="sideView">
-            <div class="commentsModal">
-              <div class="saySomething">
-                Comments and suggestions
-              </div>
-              <div class="commentsPrint">
-                <div class="user">
-                  @Edmond
-                </div>
-                <div class="commentsStruct">
-                  comments are printed right here
-                  16a085 hex color red value is 22, green value
-                  is 160 and the blue value of its RGB is 133.
-                  Cylindrical-coordinate representations
-                  (also known as HSL) of color ...Notice we used position: fixed;.
-                  The point of this is that a user could be s
-                  crolled down the page, trigger a modal, and
-                  have the modal be just as centered-and-visible a
-                  s it would be if they weren’t scrolled.
-
-                  I guess, in general, I’d consider fixed positioning fairly
-                  safe these days, even on “mobile”.
-                  But if you know you’re dealing with a pretty healthy
-                  is 160 and the blue value of its RGB is 133.
-                  Cylindrical-coordinate representations
-                  (also known as HSL) of color ...Notice we used position: fixed;.
-                  The point of this is that a user could be s
-                  crolled down the page, trigger a modal, and
-                  have the modal be just as centered-and-visible a
-                  s it would be if they weren’t scrolled.
-                  is 160 and the blue value of its RGB is 133.
-                  Cylindrical-coordinate representations
-                  (also known as HSL) of color ...Notice we used position: fixed;.
-                  The point of this is that a user could be s
-                  crolled down the page, trigger a modal, and
-                  have the modal be just as centered-and-visible a
-                  s it would be if they weren’t scrolled.
-
-
-                </div>
-              </div>
-              <div class="commentsInputs">
-                <input class="commentsInput"type="text" name="comment">
-                <input class="submit-comment" type="submit" name="submit" value="post">
-              </div>
-            </div>
-
-          </div>
+           <div class="sidenav">
+             <button  data-modal-target="#commentsbtn" class="comments" >Comments</button>
+             <button   data-modal-target="#eventsbtn" class="events" >Events</button>
+             <button  data-modal-target="#dealbtn" class="deals" >Deals</button>
+             <button data-modal-target="#travelbtn" class="travelcompanions" >Travel Companions</button>
+           </div>
+           <div class="sideView">
+             <div class="comment-header">
+               Comments and suggetions
+             </div>
+             <div class="comment-main-body">
+               <div class="user">
+                 @Edmond
+               </div>
+               <div class="comments-prints">
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+               </div>
+               <div class="user">
+                 @Edmond
+               </div>
+               <div class="comments-prints">
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+               </div>
+               <div class="user">
+                 @Edmond
+               </div>
+               <div class="comments-prints">
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+               </div>
+               <div class="user">
+                 @Edmond
+               </div>
+               <div class="comments-prints">
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+                 comments come right here
+                 comments are printed right here
+               </div>
+             </div>
+             <div class="inputs-section">
+               <textarea class="comments-input" name="name" rows="2" cols="30" placeholder="Type comment here..."></textarea>
+               <input class="comment-btn-submit" type="button" name="button" value="Send"></input>
+             </div>
+             <div class="emodal">
+               <div id="eventsbtn" class="modal-content-events">
+                 <div class="events-header">
+                   <p>Events in the area</p>
+                   <span data-modal-close class="close">&times;</span>
+                 </div>
+               </div>
+             </div>
+             <div class="dmodal">
+               <div id="dealsbtn" class="modal-content-deals">
+                 <div class="deals-header">
+                   <p>Deals in the area</p>
+                   <span data-modal-close class="close">&times;</span>
+                 </div>
+               </div>
+             </div>
+             <div class="tmodal">
+               <div id="travelbtn" class="modal-content-travel">
+                 <div class="travel-header">
+                   <p>Where is your next vacation? </p>
+                   <span data-modal-close class="close">&times;</span>
+                 </div>
+               </div>
+             </div>
+         </div>
       </div>
       <div class="main-view">
-        <div class="main-view-nav">
-          <div class= "post-msg">Share your stories</div>
-          <a href="#">Post</a>
+        <div class="redirectedToss">
+          Tossed Request:
+          <div class="theReq">
+            What is the best time to go for a vacation in Bali?
+          </div>
         </div>
-        <div class="mainView">
-          This is the main view
+        <div class="main-view-nav">
+          <a href="#">Post</a>
+          <div class= "post-msg">Share your stories and experiences</div>
+        </div>
+        <div class="mainview-container">
+          <div class="mainView">
+            This is the main view
+
+            comments are printed right here
+            16a085 hex color red value is 22, green value
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+
+            I guess, in general, I’d consider fixed positioning fairly
+            safe these days, even on “mobile”.
+            But if you know you’re dealing with a pretty healthy
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            comments are printed right here
+            16a085 hex color red value is 22, green value
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+
+            I guess, in general, I’d consider fixed positioning fairly
+            safe these days, even on “mobile”.
+            But if you know you’re dealing with a pretty healthy
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            comments are printed right here
+            16a085 hex color red value is 22, green value
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            I guess, in general, I’d consider fixed positioning fairly
+            safe these days, even on “mobile”.
+            But if you know you’re dealing with a pretty healthy
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            I guess, in general, I’d consider fixed positioning fairly
+            safe these days, even on “mobile”.
+            But if you know you’re dealing with a pretty healthy
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            I guess, in general, I’d consider fixed positioning fairly
+            safe these days, even on “mobile”.
+            But if you know you’re dealing with a pretty healthy
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+            is 160 and the blue value of its RGB is 133.
+            Cylindrical-coordinate representations
+            (also known as HSL) of color ...Notice we used position: fixed;.
+            The point of this is that a user could be s
+            crolled down the page, trigger a modal, and
+            have the modal be just as centered-and-visible a
+            s it would be if they weren’t scrolled.
+
         </div>
       </div>
+      </div>
       <div class="extra-view">
-        another side view
-        for special things
-
+        <div class="extra-view-container">
+          another side view
+          for special things
+        </div>
       </div>
     </div>
   </body>
