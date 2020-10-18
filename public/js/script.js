@@ -1,9 +1,11 @@
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-modal-close]');
+console.log(openModalButtons)
 
 openModalButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget);
+    const modal = document.querySelector(button.dataset.moda);
+    console.log(modal);
     openModal(modal);
   });
 });
@@ -18,7 +20,7 @@ closeModalButtons.forEach(button => {
 
 function openModal(modal) {
   if(modal == null) return;
-  modal.classList.add('add');
+  modal.classList.add('.modal');
 }
 
 function closeModal(modal) {
