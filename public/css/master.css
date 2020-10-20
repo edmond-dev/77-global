@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500');
+*, *::after, *::before {
+  box-sizing: border-box;
+}
 .frontBody{
   background-color: #F1FAF6;
   margin: 0;
@@ -298,7 +301,7 @@ input[class="signUp-submit"]:active {
   font-family: 'Roboto', sans-serif;
   height: auto;
 }
-#myBtn {
+.myBtn {
   float: right;
   font-size: 17px;
   font-weight: 600;
@@ -310,71 +313,109 @@ input[class="signUp-submit"]:active {
   border: 0;
   font-family: 'Roboto', sans-serif;
 }
-.comments:hover, .events:hover, .deals:hover, .travelcompanions:hover, #myBtn:hover {
+.comments:hover, .events:hover,
+.deals:hover, .travelcompanions:hover,
+.myBtn:hover {
   cursor: pointer;
   background:#43734c;
 }
-.modal {
-  display: none;
+.modal-header, .post-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #16a085;
+}
+.modal-header .close-button,
+.events-header .close-button,
+.deals-header .close-button,
+.travel-header .close-button,
+.post-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight:300;
+}
+.modal-header .close-button:hover,
+.events-header .close-button:hover,
+.deals-header .close-button:hover,
+.travel-header .close-button,
+.post-header .close-button:hover {
+  color: grey;
+}
+.modal, .modal-content-post {
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%) scale(0);
+ transition: 200ms ease-in-out;
+ border: 0;
+ border-radius: 10px;
+ z-index: 10;
+ background-color: white;
+ width: 600px;
+ max-width: 90%;
+ height: auto;
+ margin-right: 20px;
+}
+.modal.active, .modal-content-post.active {
+   transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-content, .postModal-body {
+  padding: 10px 15px;
+}
+
+#overlay, #overlaySec  {
   position: fixed;
-  z-index: 1;
+  opacity: 0;
+  transition: 200ms ease-in-out;
   top: 0;
-  left:0;
-  /* transform: translate(-50%, 50%); */
-  width:100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.2);
+  pointer-events: none;
 }
 
-.eventsModal {
+
+#overlay.active, #overlaySec.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 7% auto;
-  padding: 10px;
-  border: 1px solid #888;
-  height: 550px;
-  width: 40%;
+.modal-content-events.active, .modal-content-deals.active,
+.modal-content-travel.active {
+   transform: translate(0, 0) scale(1);
 }
+
+
 .modal-content-events, .modal-content-deals, .modal-content-travel {
   position: fixed;
-  z-index: 1;
-  top:125px;
-  overflow: auto;
+  top:120px;
+  left:0;
+  transform: translate(0, 0) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+  border: 0;
   background-color: #fefefe;
-  border-radius: 5px;
-  margin: auto;
-  /* margin-left: inherit; */
   border-radius: 10px;
-  width: 315px;
-  height:540px;
+  margin-left: 10px;
+  border-radius: 10px;
+  width: 320px;
+  height:530px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 0 0 0 		rgba(0,0,0,0.20);
 
 }
 .events-header, .deals-header, .travel-header {
+  padding: 10px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 .tosses {
   padding: 15px;
@@ -415,7 +456,7 @@ input[class="signUp-submit"]:active {
   position:sticky;
   top:90px;
   margin: 10px;
-  height: 550px
+  height: 550px;
 }
 .sidenav {
   position: sticky;
@@ -423,9 +464,10 @@ input[class="signUp-submit"]:active {
   left: 0;
   display: grid;
   grid-template-columns:auto auto auto auto;
-  border: 1px solid #16a085;
+  border:0;
   border-radius: 4px;
   text-align: center;
+
 }
 .sideView {
   padding:2px;
@@ -434,19 +476,26 @@ input[class="signUp-submit"]:active {
 }
 .inputs-section {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 50px;
   border-radius: 5px;
 }
 .comments-input {
-  padding: 5px;
-  overflow-y: hidden;
-  border: 1px solid #16a085;
+  padding:5px;
+  border-bottom: 1px solid #16a085;
+  border-right:none;
+  border-top:none;
+  border-left:none;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: .9rem;
+  resize: none;
 
 }
 .comment-btn-submit {
-  /* border-radius: 10px; */
   margin-left: 2px;
-  border: 1px solid  #16a085;
+  border: 1px solid #16a085;
+  background: white;
+  border-radius: 10px;
 }
 .comment-btn-submit:hover {
   background:  #16a085;
@@ -465,10 +514,16 @@ input[class="signUp-submit"]:active {
   overflow: auto;
   height: 425px;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 20px;
 }
 .comment-main-body::-webkit-scrollbar {
   width: 1px;
+}
+.comments-input::-webkit-scrollbar, .comments-input::-webkit-scrollbar-track {
+  background:none;
+  width: 3px;
+  margin-right: 5px;
+  padding-right: 5px;
 }
 
 /* Track */
@@ -488,8 +543,9 @@ input[class="signUp-submit"]:active {
 .comments-prints {
   border-radius: 10px;
   background: #eef3f7;
-  padding: 5px;
+  padding: 12px;
   margin-bottom: 10px;
+  font-size: 14px;
 }
 .user {
   font-size: 15px;
@@ -528,20 +584,22 @@ input[class="signUp-submit"]:active {
   padding-top: 10px;
   color: #16a085;
 }
-.main-view-nav > a {
+.postbtn {
   float: right;
   font-size: 17px;
-  font-weight: 600;
   text-decoration: none;
   background: #16a085;
   color: white;
   font-weight: 300;
-  padding: 1px;
+  padding: 4px;
   width: 50px;
   border: 0;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   margin-top: 5px;
+}
+.postbtn:hover {
+  cursor: pointer
 }
 .post-msg {
   font-size: 17px;
@@ -645,7 +703,7 @@ input[class="signUp-submit"]:active {
     font-family: 'Roboto', sans-serif;
     height: auto;
   }
-  .comments:hover, .events:hover, .deals:hover, .travelcompanions:hover, #myBtn:hover {
+  .comments:hover, .events:hover, .deals:hover, .travelcompanions:hover, .myBtn:hover {
     cursor: pointer;
     background:#43734c;
   }

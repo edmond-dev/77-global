@@ -3,24 +3,24 @@
   <head>
   <%- include('partials/layer/head.ejs') %>
   </head>
-  <body class="main-body">
+  <body class="main-body" >
       <div class="mainnav-bar">
         <a class="companyName" href="#">GlobalFriend.com</a>
         <a class="home" href="/">Home</a>
       </div>
         <div class="sidenav-res">
           <button  data-modal-target="#commentsbtn" class="comments" >Comments</button>
-          <button   data-modal-target="#eventsbtn" class="events" >Events</button>
-          <button  data-modal-target="#dealbtn" class="deals" >Deals</button>
-          <button data-modal-target="#travelbtn" class="travelcompanions" >Travel Companions</button>
+          <button   data-modal-target="#eventsModal"  class="events" >Events</button>
+          <button  data-modal-target="#dealsModal" class="deals" >Deals</button>
+          <button data-modal-target="#travelModal" class="travelcompanions" >Travel Companions</button>
         </div>
       <div class="view">
        <div class="side-viewbar">
          <div class="sidenav">
            <button  data-modal-target="#commentsbtn" class="comments" >Comments</button>
-           <button   data-modal-target="#eventsbtn" class="events" >Events</button>
-           <button  data-modal-target="#dealbtn" class="deals" >Deals</button>
-           <button data-modal-target="#travelbtn" class="travelcompanions" >Travel Companions</button>
+           <button   data-modal-target="#eventsModal" class="events" >Events</button>
+           <button  data-modal-target="#dealsModal" class="deals" >Deals</button>
+           <button data-modal-target="#travelModal" class="travelcompanions" >Travel Companions</button>
          </div>
            <div class="sideView">
              <div class="comment-header">
@@ -85,33 +85,40 @@
                </div>
              </div>
              <div class="inputs-section">
-               <textarea class="comments-input" name="name" rows="2" cols="30" placeholder="Type comment here..."></textarea>
-               <input class="comment-btn-submit" type="button" name="button" value="Send"></input>
+               <textarea class="comments-input" name="name" rows="2" cols="15" placeholder="Type comment here..."></textarea>
+               <!-- <input class="comment-btn-submit" type="button" name="button"><i class="fal fa-paper-plane"></i></input> -->
+               <button class="comment-btn-submit" type="button" name="button">send</button>
+
              </div>
-             <div class="emodal">
-               <div id="eventsbtn" class="modal-content-events">
+               <div id="eventsModal" data-modals class="modal-content-events">
                  <div class="events-header">
                    <p>Events in the area</p>
-                   <span data-modal-close class="close">&times;</span>
-                 </div>
+                   <button data-close-button class="close-button">&times;</button>
+                    </div>
+                   <div class="emodal-content">
+                     events modal body
+                   </div>
                </div>
-             </div>
-             <div class="dmodal">
-               <div id="dealsbtn" class="modal-content-deals">
+
+               <div id="dealsModal" class="modal-content-deals">
                  <div class="deals-header">
                    <p>Deals in the area</p>
-                   <span data-modal-close class="close">&times;</span>
+                   <button data-close-button class="close-button">&times;</button>
+                 </div>
+                 <div class="deals-body">
+                   This is the deals modal main body
                  </div>
                </div>
-             </div>
-             <div class="tmodal">
-               <div id="travelbtn" class="modal-content-travel">
+
+               <div id="travelModal" class="modal-content-travel">
                  <div class="travel-header">
                    <p>Where is your next vacation? </p>
-                   <span data-modal-close class="close">&times;</span>
+                  <button data-close-button class="close-button">&times;</button>
+                 </div>
+                 <div class="travelModal-body">
+                   This is the main body for travel modal
                  </div>
                </div>
-             </div>
          </div>
       </div>
       <div class="main-view">
@@ -122,8 +129,40 @@
           </div>
         </div>
         <div class="main-view-nav">
-          <a href="#">Post</a>
+          <button data-modal-target="#postModal" class="postbtn">Post</button>
           <div class= "post-msg">Share your stories and experiences</div>
+          <!-- <div id="postModal" class="modal-content-post">
+            <div class="post-header">
+              Add you story.(pictures/videos)
+             <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="postModal-body">
+              This is the main body for post modal
+              Cylindrical-coordinate representations
+              (also known as HSL) of color ...Notice we used position: fixed;.
+              The point of this is that a user could be s
+              crolled down the page, trigger a modal, and
+              have the modal be just as centered-and-visible a
+              s it would be if they weren’t scrolled.
+              I guess, in general, I’d consider fixed positioning fairly
+              safe these days, even on “mobile”.
+              But if you know you’re dealing with a pretty healthy
+              is 160 and the blue value of its RGB is 133.
+              Cylindrical-coordinate representations
+              (also known as HSL) of color ...Notice we used position: fixed;.
+              The point of this is that a user could be s
+              crolled down the page, trigger a modal, and
+              have the modal be just as centered-and-visible a
+              s it would be if they weren’t scrolled.
+              is 160 and the blue value of its RGB is 133.
+              Cylindrical-coordinate representations
+              (also known as HSL) of color ...Notice we used position: fixed;.
+              The point of this is that a user could be s
+              crolled down the page, trigger a modal, and
+              have the modal be just as centered-and-visible a
+            </div>
+          </div> -->
+            <!-- <div id="overlaySec"></div> -->
         </div>
         <div class="mainview-container">
           <div class="mainView">
@@ -243,7 +282,6 @@
             crolled down the page, trigger a modal, and
             have the modal be just as centered-and-visible a
             s it would be if they weren’t scrolled.
-
         </div>
       </div>
       </div>
