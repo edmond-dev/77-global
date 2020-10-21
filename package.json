@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "start": "nodemon app.js"
+    "devStart": "nodemon app.js"
   },
   "keywords": [
     "GF",
@@ -33,6 +33,6 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.6"
   }
 }
