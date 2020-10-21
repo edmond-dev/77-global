@@ -1,5 +1,5 @@
 "use strict";
-const db = require('../dbconfig/connections');
+// const db = require('../dbconfig/connections');
 const express = require('express');
 const router = express.Router();
 //-------------------------------------------
