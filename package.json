@@ -4,6 +4,7 @@
   "description": "A place where local guides and tourists meet.",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "start": "nodemon app.js"
   },
   "keywords": [
