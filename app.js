@@ -10,8 +10,7 @@ const mysql = require('mysql');
 const ejs = require('ejs');
 const connect = require('connect');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const session = require('express-session');
+const cookieSession = require('cookie-session')
 const flash = require('connect-flash');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
@@ -48,26 +47,13 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 //......................
-// app.set('trust proxy', 1) // trust first proxy
-// app.use(session({
-//   secret: process.env.SESSION_SECRET,
-//   resave: false,
-//   saveUninitialized: true,
-//   cookie: { secure: true }
-// }));
-var sess = {
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: true,
-  cookie: {secure: true}
-}
+app.use(cookieSession({
+  name: 'session',
+  keys: [process.env.SESSION_SECRET],
 
-if (app.get('env') === 'production') {
-  app.set('trust proxy', 1) // trust first proxy
-  sess.cookie.secure = true // serve secure cookies
-}
-
-app.use(session(sess));
+  // Cookie Options
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}));
 //=====================================================================
 //flash messages set up
 //instatiating inported modules
