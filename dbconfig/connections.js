@@ -13,7 +13,7 @@
 //   if(!err){
 //     console.log('connected to mysql.');
 //   }else{
-//     console.log(err);
+//     throw err;
 //   };
 // });
 //
