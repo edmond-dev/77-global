@@ -48,13 +48,26 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 //......................
-app.set('trust proxy', 1) // trust first proxy
-app.use(session({
+// app.set('trust proxy', 1) // trust first proxy
+// app.use(session({
+//   secret: process.env.SESSION_SECRET,
+//   resave: false,
+//   saveUninitialized: true,
+//   cookie: { secure: true }
+// }));
+var sess = {
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: true }
-}));
+  cookie: {secure: true}
+}
+
+if (app.get('env') === 'production') {
+  app.set('trust proxy', 1) // trust first proxy
+  sess.cookie.secure = true // serve secure cookies
+}
+
+app.use(session(sess));
 //=====================================================================
 //flash messages set up
 //instatiating inported modules
