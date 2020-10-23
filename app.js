@@ -24,7 +24,7 @@ const passport = require('passport');
 // const server = app.listen(app.get('port'), () => {
 //   debug('Server listening on port ' + server.address().port);
 //});
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server Running on Port ${PORT}`));
 //inporting modules
 const routes = require('./routes/index.js');
