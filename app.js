@@ -19,12 +19,12 @@ const cors = require('cors');
 const path = require('path');
 const passport = require('passport');
 //setting up a server.
-// app.set('port', process.env.PORT || 3000);
-// const server = app.listen(app.get('port'), () => {
-//   debug('Server listening on port ' + server.address().port);
-//});
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server Running on Port ${PORT}`));
+app.set('port', process.env.PORT || 3000);
+const server = app.listen(app.get('port'), () => {
+  debug('Server listening on port ' + server.address().port);
+});
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => console.log(`Server Running on Port ${PORT}`));
 //inporting modules
 const routes = require('./routes/index.js');
 const usersRoute = require('./routes/users.js');

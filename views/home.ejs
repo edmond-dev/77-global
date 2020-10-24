@@ -3,27 +3,30 @@
   <head>
       <%- include('partials/layer/head.ejs') %>
   </head>
-  <body class="main-body">
+  <body>
 
     <div class="nav-bar">
       <div class="mainlinks">
-        <a href="/">GlobalFriend.com</a>
-        <input class="homeNav" type="text" name=""placeholder="Search">
+        <a class="main-home-webname" href="/">GlobalFriend.com</a>
       </div>
     </div>
-
     <div class="main-grid-view">
 
       <div class="homelinks">
         <div class="sideLinks">
           <a class="homelink" href="/">Home</a>
-          <a href="tossReq">Toss</a>
+          <div class="userLogin">
+            Logged in as [name]
+          </div>
           <a href="#">Sign Out</a>
         </div>
       </div>
 
 
       <div class="view-toss-main">
+        <div class="seachbar-top">
+          <input class="homeNav" type="text" name=""placeholder="Search">
+        </div>
         <div class="top-toss">
            Toss Requests:
           <!-- The Modal -->
